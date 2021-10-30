@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Canvas Animation Example</title>
+<script src="navy.js"></script>
+
+<meta name="description" content="HTML5 in easy steps:example 73.0">
+
+</head>
+
+<body>
+
+<style>
+div img {
+  position: absolute;
+  left: 280px;
+  top: 50px;
+  width: 450px;
+  height: 450px;
+  animation-name: example;
+  animation-duration: 8s;
+}
+
+@keyframes example {
+  0%  {filter: contrast(0%); filter: opacity(0.0);}
+  25%  {filter: contrast(25%); filter: opacity(0.3);}
+  50%  {filter: contrast(50%); filter: opacity(0.5);}
+  100% {filter: contrast(100%); filter: opacity(1);}
+}
+
+div canvas {
+  animation-name: thing;
+  animation-duration: 4s;
+}
+
+@keyframes thing {
+  0%  {filter: contrast(0%); filter: opacity(0.0);}
+  25%  {filter: contrast(25%); filter: opacity(0.3);}
+  50%  {filter: contrast(50%); filter: opacity(0.5);}
+  100% {filter: contrast(100%); filter: opacity(1);}
+}
+</style>
+
+<div>   
+    <img id="image" src="star.png" width="500" height="600">
+    <canvas v-if="show" id="canvas" width="1000" height="1200">[Fallback Message] </canvas> 
+</div>
+
+</body>
+
+</html>
